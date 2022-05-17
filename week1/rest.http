@@ -1,0 +1,27 @@
+# GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1
+
+# GET http://localhost:8080
+
+# HEAD http://localhost:8080
+
+OPTIONS http://localhost:8080
+
+# HEAD https://web322.ca/notes/week02
+
+# HEAD https://google.com
+
+# OPTIONS https://google.com
+
+# OPTIONS https://www.olg.ca/en/lottery/top-games.html
+
+# OPTIONS https://datatracker.ietf.org/doc/html/rfc7231
+
+# GET https://facebook.com
+
+# PUT https://google.com
+
+# POST https://google.com
+
+# POST https://httpbin.org/post?name=John Doe&job=teacher
+
+# POST https://httpbin.org/post?age=6
