@@ -1,0 +1,12 @@
+{
+  "name": "week2b",
+  "version": "1.0.0",
+  "description": "week2b demo",
+  "main": "util_debuglog.js",
+  "scripts": {
+    "start": "node util_debuglog.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
