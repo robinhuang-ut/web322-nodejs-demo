@@ -1,0 +1,37 @@
+
+
+    <body>
+        {{> welcome data }}
+        <table border='1'>
+            <tr>
+                
+                <th>Name</th>
+                <th>Age</th>
+                <th>Occupation</th>
+                <th>Company</th>
+            </tr>
+            
+                {{#if data.visible}}
+                    <tr>
+                        
+                        <td>{{data.name}}</td>
+                        <td>{{data.age}}</td>
+                        <td>{{data.occupation}}</td>
+                        <td>{{data.company}}</td>
+                    </tr>
+                {{else}}
+                    <td colspan="5">User: '{{data.name}}' has hidden their information</td>
+                {{/if}}
+
+                {{#unless contract}}
+                    <tr>
+                        <td colspan="5">Full-Time employee</td>
+                    </tr>
+                {{/unless}}
+            
+        </table>
+
+        {{#list data}}
+            Name: {{name}} Age: {{age}} Occupation: {{occupation}} Company: {{company}}
+        {{/list}}
+    </body>
