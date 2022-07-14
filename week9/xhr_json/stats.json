@@ -1,0 +1,5 @@
+[{"id":1,"longitude":-114.31,"latitude":34.19,"housing_median_age":15.0,"total_rooms":5612.0,"total_bedrooms":1283.0,"population":1015.0,"households":472.0,"median_income":1.4936,"median_house_value":66900.0},
+{"id":2,"longitude":-114.47,"latitude":34.4,"housing_median_age":19.0,"total_rooms":7650.0,"total_bedrooms":1901.0,"population":1129.0,"households":463.0,"median_income":1.82,"median_house_value":80100.0},
+{"id":3,"longitude":-114.56,"latitude":33.69,"housing_median_age":17.0,"total_rooms":720.0,"total_bedrooms":174.0,"population":333.0,"households":117.0,"median_income":1.6509,"median_house_value":85700.0},
+{"id":4,"longitude":-114.57,"latitude":33.64,"housing_median_age":14.0,"total_rooms":1501.0,"total_bedrooms":337.0,"population":515.0,"households":226.0,"median_income":3.1917,"median_house_value":73400.0},
+{"id":5,"longitude":-114.57,"latitude":33.57,"housing_median_age":20.0,"total_rooms":1454.0,"total_bedrooms":326.0,"population":624.0,"households":262.0,"median_income":1.925,"median_house_value":65500.0}]

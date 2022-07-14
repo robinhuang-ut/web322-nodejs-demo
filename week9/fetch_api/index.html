@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Fetch API Test</title>
+<script>
+    function postUser(){
+        fetch('https://reqres.in/api/users/', { 
+            method: 'POST',
+            body: JSON.stringify({user:"Jason Doe", job:"developer"}),
+            headers: { 'Content-Type': 'application/json'} 
+        })
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);   
+        });
+    }
+    function getUsers(){
+        fetch('https://reqres.in/api/users/')
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);   
+        });
+    }
+    function errorHandler(){
+        fetch("https://reqres.in/api/unknown/23").then(response =>{
+            // return a rejected promise with the status code of the response if it wasn't "ok"
+            return (response.ok) ? response.json() : Promise.reject(response.status); 
+        }).then(json => {
+            console.log(json);
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+    function jsontoObject(){
+        let myJSONStr = '{"users":[{"userId":1,"fName":"Joe","lName":"Smith"},{"userId":2,"fName":"Jeffrey","lName":"Sherman"},{"userId":3,"fName":"Shantell","lName":"McLeod"}]}';
+        // Convert to An Object:
+        let myObj = JSON.parse(myJSONStr);
+        // Access the 3rd user
+        console.log(myObj.users[2].fName); 
+    }
+    function objecttoJSON(){
+        let myObj = {users: [{userId:1,fName:"Joe",lName:"Smith"},
+                        {userId:2,fName:"Jeffrey",lName:"Sherman"},
+                        {userId:3,fName:"Shantell",lName:"McLeod"}]};
+
+        let myJSON = JSON.stringify(myObj);
+        console.log(myJSON); // Outputs: '{"users":[{"userId":1,"fName":"Joe","lName":"Smith"},{"userId":2,"fName":"Jeffrey","lName":"Sherman"},{"userId":3,"fName":"Shantell","lName":"McLeod"}]}' 
+    }
+
+    function accessText(){
+        fetch('data.txt')
+        .then(response => response.text())
+        .then(data => console.log(data));
+    }
+    function accessJSON(){
+        fetch('stats.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+    }
+
+</script>
+</head>
+
+<body>
+    <p>Test the API by outputting to the browser console:</p>
+    
+    <button type="button" onclick="postUser()">Post User</button><br /><br />
+    <button type="button" onclick="getUsers()">Get Users</button><br /><br />
+    <button type="button" onclick="errorHandler()">Error Handler</button><br /><br />
+    <button type="button" onclick="jsontoObject()">JSON to Object</button><br /><br />
+    <button type="button" onclick="objecttoJSON()">Object to JSON</button><br /><br />
+    <button type="button" onclick="accessText()">Access TXT File</button><br /><br />
+    <button type="button" onclick="accessJSON()">Access JSON File</button><br /><br />
+
+</body>
+
+</html>
