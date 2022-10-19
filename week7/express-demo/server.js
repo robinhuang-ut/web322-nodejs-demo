@@ -1,9 +1,14 @@
 const Sequelize = require('sequelize');
+const database='uxlsuwfa';
+const user='uxlsuwfa';
+const password='E99gq7dbGlx6P6jlbaE8L_Tp7TxVLc_s';
+const host='jelani.db.elephantsql.com';
+
 
 // set up sequelize to point to our postgres database
-var sequelize = new Sequelize('d6ujnl3iar8u7g'
-    , 'ifjsbifzliwugs', 'c7acdf94caf20c68e61d7c807aa959afabd83c36c7c13c9dc5dc1faf3995a902', {
-    host: 'ec2-44-206-89-185.compute-1.amazonaws.com',
+var sequelize = new Sequelize(database
+    , user, password, {
+    host: host,
     dialect: 'postgres',
     port: 5432,
     dialectOptions: {
